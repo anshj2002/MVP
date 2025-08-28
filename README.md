@@ -82,8 +82,8 @@ A **Minimum Viable Product (MVP)** learning platform designed specifically for *
 
 ```bash
 # Clone the repository
-git clone https://github.com/anshj2002/economics-mcq-platform.git
-cd economics-mcq-platform
+git clone https://github.com/anshj2002/MVP.git
+
 
 # Create and activate virtual environment
 python -m venv .venv
