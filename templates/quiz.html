@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz — Economics MCQ MVP</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header>
+  <h1>Quiz</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/quiz">Start Quiz</a>
+    <a href="/dashboard">Dashboard</a>
+  </nav>
+</header>
+<main>
+  {% if question %}
+  <section class="card">
+    <h2>{{ question.question }}</h2>
+    <form action="/submit" method="post">
+      <input type="hidden" name="qid" value="{{ question.id }}" />
+      <ol type="A">
+        {% for opt in question.options %}
+        <li>
+          <label>
+            <input type="radio" name="answer" value="{{ loop.index0 }}" required />
+            {{ opt }}
+          </label>
+        </li>
+        {% endfor %}
+      </ol>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="meta">
+      <span>Topic: {{ question.topic }}</span> • 
+      <span>Difficulty: {{ question.difficulty }}</span>
+    </div>
+  </section>
+  {% else %}
+  <section class="card">
+    <h2>You're all caught up!</h2>
+    <p>No more questions available in this session. Visit the <a href="/dashboard">Dashboard</a> to see your progress.</p>
+  </section>
+  {% endif %}
+</main>
+<footer>Good luck!</footer>
+</body>
+</html>

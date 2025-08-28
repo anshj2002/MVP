@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — Economics MCQ MVP</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+  <h1>Dashboard</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/quiz">Start Quiz</a>
+    <a href="/dashboard">Dashboard</a>
+  </nav>
+</header>
+<main>
+  <section class="grid">
+    <div class="card">
+      <h2>Overview</h2>
+      <p><strong>Level:</strong> {{ summary.level }} | <strong>Accuracy:</strong> {{ summary.accuracy }}% | <strong>Total Qs:</strong> {{ summary.total }}</p>
+      <p><strong>Current Streak:</strong> {{ summary.streak }}</p>
+    </div>
+    <div class="card">
+      <h2>Weak Areas</h2>
+      {% if summary.weak_topics %}
+      <ul>
+        {% for topic, acc in summary.weak_topics %}
+          <li>{{ topic }} — {{ "%.1f"|format(acc) }}% correct</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p>Not enough data yet. Keep practicing!</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Score Trend</h2>
+    <canvas id="trend"></canvas>
+  </section>
+</main>
+<footer>Keep going — consistency compounds.</footer>
+
+<script>
+async function fetchProgress(){
+  const res = await fetch('/api/progress');
+  return res.json();
+}
+(async () => {
+  const data = await fetchProgress();
+  // Fake a simple trend: plot accuracy as a single point history snapshot.
+  const labels = ['Start','Now'];
+  const scores = [0, data.accuracy];
+  const ctx = document.getElementById('trend').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets: [{ label: 'Accuracy %', data: scores }] },
+    options: { responsive: true, scales: { y: { beginAtZero: true, max: 100 } } }
+  });
+})();
+</script>
+</body>
+</html>

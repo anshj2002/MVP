@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Economics MCQ MVP</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header>
+  <h1>About This Project</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/quiz">Start Quiz</a>
+    <a href="/dashboard">Dashboard</a>
+  </nav>
+</header>
+<main>
+  <section class="card">
+    <h2>Tech Stack</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, vanilla JS</li>
+      <li><strong>Backend:</strong> FastAPI with Jinja templates</li>
+      <li><strong>Data:</strong> JSON (extracted / fallback from AQA Paper 3 MCQs)</li>
+      <li><strong>Charts:</strong> Chart.js for simple visualizations</li>
+    </ul>
+    <h2>Adaptive Engine (Simplified)</h2>
+    <p>We track your <em>level</em> (1–10) and <em>streak</em>. Correct answers raise the streak; every 3 in a row increase your level. Wrong answers reset the streak and can reduce level. Levels bias questions: levels 1–3 → easy, 4–6 → medium, 7–10 → hard.</p>
+    <h2>Notes</h2>
+    <ul>
+      <li>PDF parsing is naive; we ship fallback, hand-checked items with correct answers.</li>
+      <li>Per-session progress is stored in-memory using a signed cookie for a lightweight demo.</li>
+    </ul>
+  </section>
+</main>
+<footer>Built for a simple demo — extend as needed.</footer>
+</body>
+</html>

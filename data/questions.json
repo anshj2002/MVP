@@ -1,0 +1,86 @@
+[
+  {
+    "id": "q1",
+    "topic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "A positive statement in economics is one that:",
+    "options": [
+      "Can be tested against evidence",
+      "Expresses a value judgment",
+      "Cannot be falsified",
+      "Is always true"
+    ],
+    "answer_index": 0,
+    "source": "fallback"
+  },
+  {
+    "id": "q2",
+    "topic": "Microeconomics",
+    "difficulty": "easy",
+    "question": "If the price of a normal good increases, ceteris paribus, the income effect will cause quantity demanded to:",
+    "options": [
+      "Increase",
+      "Decrease",
+      "Remain unchanged",
+      "First increase then decrease"
+    ],
+    "answer_index": 1,
+    "source": "fallback"
+  },
+  {
+    "id": "q3",
+    "topic": "Macroeconomics",
+    "difficulty": "medium",
+    "question": "Which policy mix is most likely to reduce demand-pull inflation?",
+    "options": [
+      "Decreasing interest rates and increasing government spending",
+      "Increasing interest rates and decreasing government spending",
+      "Decreasing taxes and increasing government spending",
+      "Quantitative easing and lower interest rates"
+    ],
+    "answer_index": 1,
+    "source": "fallback"
+  },
+  {
+    "id": "q4",
+    "topic": "Trade",
+    "difficulty": "medium",
+    "question": "A tariff imposed on imports will, in a small importing country:",
+    "options": [
+      "Lower domestic prices below world prices",
+      "Raise domestic prices above world prices",
+      "Have no impact on domestic prices",
+      "Always increase consumer surplus"
+    ],
+    "answer_index": 1,
+    "source": "fallback"
+  },
+  {
+    "id": "q5",
+    "topic": "Microeconomics",
+    "difficulty": "hard",
+    "question": "The price elasticity of demand is -0.5. A 10% price cut will change quantity demanded by approximately:",
+    "options": [
+      "5% increase",
+      "10% increase",
+      "20% increase",
+      "5% decrease"
+    ],
+    "answer_index": 0,
+    "source": "fallback"
+  },
+  {
+    "id": "q6",
+    "topic": "Macroeconomics",
+    "difficulty": "hard",
+    "question": "In the long run, an increase in the money supply is most likely to:",
+    "options": [
+      "Increase real output and reduce unemployment",
+      "Increase nominal prices with no change in real output",
+      "Reduce both real output and the price level",
+      "Have no effect on nominal or real variables"
+    ],
+    "answer_index": 1,
+    "source": "fallback"
+  }
+]

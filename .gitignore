@@ -1,0 +1,57 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.build/
+dist/
+build/
+pip-wheel-metadata/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# Testing / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE / tooling
+.vscode/
+.idea/
+*.code-workspace
+.mypy_cache/
+.pyright/
+.pyre/
+
+# Logs
+*.log
+logs/
+
+# Env & secrets (e.g., GEMINI_API_KEY)
+.env
+.env.*
+*.secret
+secrets.json
+
+# Caches
+.cache/
+__snapshots__/
+
+# SQLite or local data (if you add persistence later)
+*.db
+*.sqlite
+*.sqlite3
+
+# Node bits (only if you add tooling later)
+node_modules/
